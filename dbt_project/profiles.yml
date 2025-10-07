@@ -1,0 +1,6 @@
+dagster_dbt_bug:
+  target: main
+  outputs:
+    main:
+      type: duckdb
+      path: ":memory:"

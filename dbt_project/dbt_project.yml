@@ -1,0 +1,9 @@
+name: 'dagster_dbt_bug'
+version: '1.0.0'
+config-version: 2
+
+profile: 'dagster_dbt_bug'
+
+vars:
+  unit_tests_config:
+    use_qualified_sources: true

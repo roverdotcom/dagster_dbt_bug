@@ -1,0 +1,9 @@
+.venv/
+
+target/
+dbt_packages/
+logs/
+dbt.log
+profiles.ymp
+
+.DS_Store

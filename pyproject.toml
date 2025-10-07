@@ -1,0 +1,16 @@
+[project]
+name = "dagster_dbt_bug"
+version = "1.0.0"
+description = "Reproducing Dagster DBT bug"
+requires-python = "==3.11.13"
+dependencies = [
+    "dagster==1.11.13",
+    "dagster-webserver==1.11.13",
+    "dbt-core==1.10.13",
+    "dagster-duckdb==0.27.13",
+    "dagster-dbt==0.27.13",
+    "dbt-duckdb==1.9.6",
+]
+
+[tool.dagster]
+module_name = "dagster_dbt_bug"
