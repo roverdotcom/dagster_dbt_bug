@@ -10,9 +10,12 @@ my_project.prepare_if_dev()
 
 dbt = DbtCliResource(project_dir=my_project)
 
-@dbt_assets(manifest=my_project.manifest_path)
+@dbt_assets(
+    manifest=my_project.manifest_path,
+    exclude="tag:unit-test"
+)
 def my_dbt_assets(context: AssetExecutionContext, dbt: DbtCliResource):
-    yield from dbt.cli(["build", "--exclude", "tag:unit-test"], context=context).stream()
+    yield from dbt.cli(["build"], context=context).stream()
 
 @asset(deps=[my_dbt_assets])
 def downstream_asset(context: AssetExecutionContext) -> None:

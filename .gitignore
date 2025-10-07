@@ -9,3 +9,7 @@ dbt.log
 .user.yml
 
 .DS_Store
+
+# Ignore Python bytecode
+__pycache__/
+*.pyc
